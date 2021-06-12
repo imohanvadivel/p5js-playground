@@ -236,6 +236,17 @@ const TsEditor: React.FC<Props> = ({
     };
   }, []);
 
+  // Listening keyboard events to
+  // prevent cmd+S save, new functionality
+  // can be extended inside keyEvent function
+  useEffect(() => {
+    window.addEventListener("keydown", keyEvent);
+    function keyEvent(e) {
+      e.preventDefault();
+    }
+    return () => window.removeEventListener("keydown", keyEvent);
+  }, []);
+
   return <div id="ts-editor" ref={container}></div>;
 };
 
