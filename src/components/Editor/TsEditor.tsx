@@ -241,8 +241,10 @@ const TsEditor: React.FC<Props> = ({
   // can be extended inside keyEvent function
   useEffect(() => {
     window.addEventListener("keydown", keyEvent);
-    function keyEvent(e) {
-      e.preventDefault();
+    function keyEvent(e: KeyboardEvent) {
+      if (e.code === "KeyS") {
+        e.preventDefault();
+      }
     }
     return () => window.removeEventListener("keydown", keyEvent);
   }, []);
