@@ -242,8 +242,8 @@ const TsEditor: React.FC<Props> = ({
   useEffect(() => {
     window.addEventListener("keydown", keyEvent);
     function keyEvent(e: KeyboardEvent) {
-      if (e.code === "KeyS") {
-        e.preventDefault();
+      if (e.keyCode === 83) {
+        if (e.ctrlKey || e.metaKey) e.preventDefault();
       }
     }
     return () => window.removeEventListener("keydown", keyEvent);
