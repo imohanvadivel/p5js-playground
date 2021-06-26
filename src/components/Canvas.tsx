@@ -15,8 +15,8 @@ const Canvas: React.FC<Props> = ({ sketchCode }) => {
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Sketch</title>
-      <script src="https://unpkg.com/p5@1.3.1/lib/p5.min.js"></script> 
-      <script src="https://unpkg.com/p5@1.3.1/lib/addons/p5.sound.min.js"></script>  
+      <script src="https://unpkg.com/p5@1.3.1/lib/p5.min.js">
+      </script> 
       <style>
         html, body {
           width: 100%;

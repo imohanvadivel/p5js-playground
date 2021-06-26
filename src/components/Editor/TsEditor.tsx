@@ -79,7 +79,30 @@ const TsEditor: React.FC<Props> = ({
     });
 
     editor.current = monaco.editor.create(container.current, {
-      value: `\nfunction setup() {\n\tcreateCanvas(windowWidth,windowHeight);\n\t\n}\n\nfunction draw() {\n\t\n}`,
+      value: `let x = 0;
+let y = 0;
+let spacing = 20;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  background(0);
+}
+
+function draw() {
+  stroke(255);
+  if (random(1) < 0.5) {
+    line(x, y, x + spacing, y + spacing);
+  } else {
+    line(x, y + spacing, x + spacing, y);
+  }
+  x = x + spacing;
+  if (x > width) {
+    x = 0;
+    y = y + spacing;
+  }
+}
+
+`,
       language: "javascript",
       scrollbar: {
         verticalScrollbarSize: 5,
@@ -95,7 +118,7 @@ const TsEditor: React.FC<Props> = ({
       setChangeId((prev) => prev + 1);
     });
 
-    editor.current.setPosition({ lineNumber: 8, column: 3 });
+    editor.current.setPosition({ lineNumber: 10, column: 17 });
 
     return () => {
       editor.current.dispose();

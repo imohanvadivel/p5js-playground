@@ -240,7 +240,7 @@ const Preference: React.FC<Props> = ({
 
       <footer className="flex-h center">
         <span>
-          Built by{" "}
+          Built by
           <a
             href="https://twitter.com/imohanvadivel"
             target="_blank"
@@ -252,11 +252,7 @@ const Preference: React.FC<Props> = ({
           target="_blank"
           href="https://github.com/imohanvadivel/p5js-typescript-playground"
           className="plain github flex">
-          <svg
-            width="1.5rem"
-            height="1.5rem"
-            viewBox="0 0 16 16"
-            xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
             <path
               fillRule="evenodd"
               clipRule="evenodd"

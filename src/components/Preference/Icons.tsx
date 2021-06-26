@@ -319,8 +319,7 @@ export function ligature() {
 export function typescrip_logo() {
   return (
     <svg
-      width="1.5rem"
-      height="1.5rem"
+      className="lang_logo"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -335,8 +334,7 @@ export function typescrip_logo() {
 export function javascript_logo() {
   return (
     <svg
-      width="1.5rem"
-      height="1.5rem"
+      className="lang_logo"
       viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">

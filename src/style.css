@@ -89,6 +89,11 @@ body {
 /* Header
 ====================================== */
 
+.lang_logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 #editor > header {
   background-color: var(--backgroundColor);
   position: relative;
@@ -199,6 +204,8 @@ footer .twitter:hover {
 }
 
 footer svg {
+  width: 1.5rem;
+  height: 1.5rem;
   fill: rgba(var(--foregroundColor-rgb), 0.4);
 }
 
