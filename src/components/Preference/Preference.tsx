@@ -58,7 +58,13 @@ const Preference: React.FC<Props> = ({
   }, []);
 
   return (
-    <section id="preference" className="hide-scrollbar depth2">
+    <section
+      id="preference"
+      className={
+        editorOptions.theme == "dark"
+          ? "hide-scrollbar depth2"
+          : "hide-scrollbar"
+      }>
       <div>
         {/* Dark Mode------------------ */}
         <section className="darkMode pref-el">
