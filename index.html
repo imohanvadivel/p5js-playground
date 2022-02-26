@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta
+      name="description"
+      content="A clean and intuitive interface for programming p5.js with intelligent code completion, hover info, and signature information."
+    />
     <meta name="theme-color" content="#fff" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="./dist/manifest.json" />
+    <link rel="shortcut icon" href="./dist/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      href="./dist/192_maskable.png"
+      type="image/png"
+    />
     <title>p5.js Playground</title>
 
     <script>
@@ -49,6 +58,11 @@
       </div>
     </section>
     <div id="app"></div>
+    <script src="./dist/app.js"></script>
   </body>
-  <script src="./dist/app.js"></script>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
 </html>

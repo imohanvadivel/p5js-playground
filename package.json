@@ -1,14 +1,13 @@
 {
   "name": "p5js-typescript-playground",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/imohanvadivel/p5js-typescript-playground.git",
+  "repository": "https://github.com/imohanvadivel/p5js-playground.git",
   "author": "Mohan Vadivel <mohanvadivel@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node build.js"
+    "build": "node build.js"
   },
   "dependencies": {
+    "grilles": "^1.0.5",
     "monaco-editor": "^0.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

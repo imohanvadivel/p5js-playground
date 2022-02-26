@@ -9,7 +9,7 @@ esbuild.build({
   },
   outdir: "dist",
   bundle: true,
-  // minify: true,
+  minify: true,
   define: {
     "process.env.NODE_ENV": '"development"',
   },
@@ -26,6 +26,6 @@ esbuild.build({
   loader: {
     ".ttf": "file",
   },
-  watch: true,
-  sourcemap: true,
+  // watch: true,
+  // sourcemap: true,
 });

@@ -246,7 +246,7 @@ const Preference: React.FC<Props> = ({
 
       <footer className="flex-h center">
         <span>
-          Built by
+          Built by&nbsp;
           <a
             href="https://twitter.com/imohanvadivel"
             target="_blank"

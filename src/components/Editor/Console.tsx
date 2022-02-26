@@ -10,6 +10,23 @@ interface Props {
 const Console: React.FC<Props> = ({ error, setError, setIsRunning }) => {
   const [consoleMsg, setConsoleMsg] = useState([]);
 
+  // Service worker thing
+    useEffect(() => {
+    if (!window.BroadcastChannel) return;
+    let channel = new BroadcastChannel("p5-refresh");
+    channel.onmessage = function (e) {
+      // @ts-ignore
+      if ((e.data = "refresh")) {
+        let initial = localStorage.getItem("p5-initial");
+        if (!initial) {
+          localStorage.setItem("p5-initial", "true");
+        } else {
+          useToast("Refresh the page for new updates to take effect", 8000);
+        }
+      }
+    };
+  }, []);
+
   // Listening for error message from iframe
   useEffect(() => {
     window.addEventListener("message", (event) => {
